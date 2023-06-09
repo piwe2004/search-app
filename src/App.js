@@ -2,6 +2,8 @@ import React from "react";
 import SearchInput from "./components/SearchInput";
 import NavigationBar from "./components/NavigationBar";
 import { Navigate, Route, Routes } from "react-router-dom";
+import AllResult from "./components/results/AllResult";
+import ImageResult from './components/results/ImageResult';
 
 function App() {
     return (
@@ -12,6 +14,8 @@ function App() {
             </div>
             <Routes>
                 <Route exact path="/" element={<Navigate to="/all" />} />
+                <Route exact path="/all" element={<AllResult />} />
+                <Route exact path="/photo" element={<ImageResult />} />
             </Routes>
         </div>
     );
